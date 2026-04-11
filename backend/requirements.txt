@@ -1,0 +1,6 @@
+fastapi==0.115.6    # for backend api
+uvicorn[standard]==0.32.1   # server to run backend
+sqlalchemy==2.0.36    # interact with SQLite database
+groq==0.13.1    # llm used 
+python-dotenv==1.0.1   # loading API keys from .env file 
+pydantic==2.10.3    # data validation
