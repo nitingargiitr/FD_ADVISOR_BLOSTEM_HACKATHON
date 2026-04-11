@@ -1,0 +1,211 @@
+[
+  {
+    "id": "pa",
+    "term": "p.a.",
+    "aliases": ["per annum", "% p.a", "percent per annum"],
+    "definitions": {
+      "hi": "सालाना — पूरे एक साल में मिलने वाली दर। जैसे 8.50% p.a. का मतलब हर साल आपके पैसे पर इतना ब्याज।",
+      "bho": "साल भर के — पूरा साल में कितना ब्याज मिलेला। 8.50% p.a. मतलब हर साल इतना बढ़ी।",
+      "ta": "ஆண்டுக்கு (p.a.) — ஒரு முழு ஆண்டுக்கு கிடைக்கும் விகிதம். 8.50% p.a. என்றால் ஒவ்வொரு ஆண்டும் இவ்வளவு வட்டி.",
+      "en": "Per annum — the rate quoted for one full year. 8.50% p.a. means that much interest each year on your deposit."
+    }
+  },
+  {
+    "id": "tenor",
+    "term": "tenor",
+    "aliases": ["12M tenor", "tenure", "duration", "period"],
+    "definitions": {
+      "hi": "अवधि — पैसा कितने समय के लिए जमा रहेगा। 12M का मतलब 12 महीने (एक साल)।",
+      "bho": "समय — पैसा कतना महिना धरल रहे। 12M मतलब 12 महिना।",
+      "ta": "காலம் — பணம் எவ்வளவு காலம் லாக் ஆகும். 12M என்றால் 12 மாதங்கள் (ஒரு வருடம்).",
+      "en": "How long the money stays locked in the FD. 12M means 12 months (one year)."
+    }
+  },
+  {
+    "id": "tds",
+    "term": "TDS",
+    "aliases": ["tax deducted at source"],
+    "definitions": {
+      "hi": "सरकार ब्याज से पहले ही थोड़ा टैक्स काट लेती है — इसे TDS कहते हैं। बैंक आपको फॉर्म भरने को कह सकता है।",
+      "bho": "सरकार ब्याज पर से पहिले थोड़ा टैक्स काट लेला — ई TDS कहलावेला।",
+      "ta": "வட்டியில் இருந்து அரசு முன்கூட்டியே வரி வெட்டுவது TDS. வங்கி படிவம் கேட்கலாம்.",
+      "en": "Tax Deducted at Source — a slice of interest withheld for tax. Banks may ask for PAN/forms."
+    }
+  },
+  {
+    "id": "premature_withdrawal",
+    "term": "premature withdrawal",
+    "aliases": ["early withdrawal", "break fd"],
+    "definitions": {
+      "hi": "समय से पहले FD तोड़ना — बैंक कम ब्याज दे सकता है या पेनल्टी लगा सकता है।",
+      "bho": "समय से पहिले FD तोड़ल — बैंक कम ब्याज दे सकेला या जुर्माना लगावेला।",
+      "ta": "காலம் முடிவதற்கு முன் FD உடைத்தல் — வங்கி குறைந்த வட்டி அல்லது அபராதம் விதிக்கலாம்.",
+      "en": "Closing the FD before maturity — the bank may pay a lower rate or charge a penalty."
+    }
+  },
+  {
+    "id": "nomination",
+    "term": "nomination",
+    "aliases": ["nominee"],
+    "definitions": {
+      "hi": "नॉमिनेशन — अगर कुछ हो जाए तो पैसा किसके नाम जाए, यह बताना।",
+      "bho": "नॉमिनेशन — अगर कुछ हो जाए त पैसा कवन के नाम जाई, ई बतावे के।",
+      "ta": "நாமினேஷன் — ஏதேனும் நடந்தால் பணம் யாருக்குச் செல்லும் என்பதை பதிவு செய்தல்.",
+      "en": "Telling the bank who should receive the money if something happens to you."
+    }
+  },
+  {
+    "id": "compounding",
+    "term": "compounding",
+    "aliases": ["compound interest"],
+    "definitions": {
+      "hi": "चक्रवृद्धि — ब्याज पर भी ब्याज मिलना, जैसे छोटा पेड़ बड़ा होता जाए।",
+      "bho": "चक्रवृद्धि — ब्याज पर फेर ब्याज मिलेला, लगातार बढ़त रहेला।",
+      "ta": "கூட்டு வட்டி — வட்டிக்கும் வட்டி சேர்ந்து வளர்வது; சிறு மரம் பெரியதாகும் போல.",
+      "en": "Interest earning interest over time — growth speeds up like a snowball."
+    }
+  },
+  {
+    "id": "simple_interest",
+    "term": "simple interest",
+    "aliases": ["si"],
+    "definitions": {
+      "hi": "साधारण ब्याज — हर साल सिर्फ मूलधन पर ही ब्याज, ब्याज पर ब्याज नहीं।",
+      "bho": "साधारण ब्याज — हर साल मूल राशि पर ही ब्याज, ब्याज पर ब्याज नइखे।",
+      "ta": "எளிய வட்டி — ஒவ்வொரு ஆண்டும் அசல் மீது மட்டும் வட்டி; வட்டிக்கு வட்டி இல்லை.",
+      "en": "Interest calculated only on the principal each year, not on past interest."
+    }
+  },
+  {
+    "id": "maturity_amount",
+    "term": "maturity amount",
+    "aliases": ["maturity", "maturity value"],
+    "definitions": {
+      "hi": "परिपक्व राशि — जब FD की तारीख पूरी हो, तब मिलने वाला कुल पैसा (जमा + ब्याज)।",
+      "bho": "परिपक्व राशि — FD खतम होखे पर मिले वाला कुल पैसा।",
+      "ta": "முதிர்ச்சி தொகை — FD முடியும் போது கிடைக்கும் மொத்தம் (அசல் + வட்டி).",
+      "en": "Total you get when the FD matures — principal plus interest."
+    }
+  },
+  {
+    "id": "cumulative_fd",
+    "term": "cumulative FD",
+    "aliases": ["cumulative"],
+    "definitions": {
+      "hi": "क्यूमुलेटिव FD — ब्याज अंत में एक साथ मिलता है, बीच में नहीं।",
+      "bho": "क्यूमुलेटिव FD — ब्याज अंत में एक साथ मिलेला।",
+      "ta": "குமுலேட்டிவ் FD — வட்டி இடையில் அல்ல; முடிவில் ஒருங்கே கிடைக்கும்.",
+      "en": "Interest is reinvested and paid in one lump sum at maturity."
+    }
+  },
+  {
+    "id": "non_cumulative_fd",
+    "term": "non-cumulative FD",
+    "aliases": ["non cumulative", "payout fd"],
+    "definitions": {
+      "hi": "नॉन-क्यूमुलेटिव FD — ब्याज हर महीने/त्रैमास में खाते में आता रहता है।",
+      "bho": "नॉन-क्यूमुलेटिव FD — ब्याज हर महीना/त्रैमास में खाते में आवेला।",
+      "ta": "நான்-குமுலேட்டிவ் FD — வட்டி மாதம்/காலாண்டுக்கு கணக்கில் வரும்.",
+      "en": "Interest is paid out periodically (monthly/quarterly) instead of at the end."
+    }
+  },
+  {
+    "id": "lien",
+    "term": "lien",
+    "aliases": ["mark lien"],
+    "definitions": {
+      "hi": "लियन — बैंक पर आपका कुछ हक/दावा, जैसे लोन के लिए FD गिरवी रखना।",
+      "bho": "लियन — बैंक पर हक, जइसे लोन खातिर FD गिरवी।",
+      "ta": "லீன் — வங்கியின் மீது உரிமை; கடனுக்கு FD அடமானம் போல.",
+      "en": "A bank's legal claim on your FD, often when it is pledged for a loan."
+    }
+  },
+  {
+    "id": "dicgc",
+    "term": "DICGC insurance",
+    "aliases": ["deposit insurance", "dicgc", "insurance upto 5 lakh"],
+    "definitions": {
+      "hi": "DICGC बीमा — अगर बैंक में दिक्कत आए तो हर जमाकर्ता को 5 लाख तक की सुरक्षा (नियमों के अनुसार)।",
+      "bho": "DICGC बीमा — बैंक में दिक्कत आए त हर जमाकर्ता 5 लाख तक सुरक्षा (नियम अनुसार)।",
+      "ta": "DICGC காப்பீடு — வங்கி சிக்கலில் ஒவ்வொரு வைப்பாளருக்கும் ₹5 லட்சம் வரை பாதுகாப்பு (விதிகள்படி).",
+      "en": "Government-backed deposit insurance up to ₹5 lakh per depositor per bank (as per rules)."
+    }
+  },
+  {
+    "id": "sweep_in_fd",
+    "term": "sweep-in FD",
+    "aliases": ["sweep in", "flexi fd"],
+    "definitions": {
+      "hi": "स्वीप-इन FD — जरूरत पड़ने पर पैसा सेविंग अकाउंट में वापस आ सकता है, थोड़ा कम ब्याज मिल सकता है।",
+      "bho": "स्वीप-इन FD — जरूरत पर पैसा बचत खाते में आ जाई, ब्याज थोड़ा कम हो सकेला।",
+      "ta": "ஸ்வீப்-இன் FD — தேவைப்பட்டால் பணம் சேமிப்புக் கணக்குக்குத் திரும்பும்; வட்டி குறைவாக இருக்கலாம்.",
+      "en": "Links FD with savings; surplus can sweep into FD and liquidity can sweep back — rates may differ."
+    }
+  },
+  {
+    "id": "auto_renewal",
+    "term": "auto-renewal",
+    "aliases": ["auto renewal", "renew automatically"],
+    "definitions": {
+      "hi": "ऑटो-रिन्यूअल — मैच्योरिटी पर FD अपने आप नई दरों से फिर से शुरू हो जाए।",
+      "bho": "ऑटो-रिन्यूअल — मैच्योरिटी पर FD आपन आप नया दर से फेर शुरू हो जाई।",
+      "ta": "ஆட்டோ-ரினியூவல் — முதிர்ச்சியில் FD தானாக புதிய விகிதங்களுடன் தொடரலாம்.",
+      "en": "On maturity, the FD can roll over automatically at then-prevailing rates."
+    }
+  },
+  {
+    "id": "regular_fd",
+    "term": "Regular FD",
+    "aliases": ["fixed deposit", "fd", "saadharan fd"],
+    "definitions": {
+      "hi": "सामान्य FD — बैंक में पैसा एक तय समय के लिए रखें और गारंटीड ब्याज पाएं। गुल्लक की तरह, पर ब्याज के साथ।",
+      "bho": "साधारण FD — बैंक में पैसा तय समय खातिर रखीं आ पक्का ब्याज पाईं। गुल्लक जइसन, पर ब्याज के साथे।",
+      "ta": "சாதாரண FD — வங்கியில் குறிப்பிட்ட காலம் பணம் வைத்து உத்தரவாத வட்டி பெறுங்கள். சேமிப்பு குண்டு போல, ஆனால் வட்டியுடன்.",
+      "en": "Regular FD — Lock money in a bank for a set time (7 days to 10 years) and earn guaranteed interest. Like a piggy bank that grows."
+    }
+  },
+  {
+    "id": "tax_saving_fd",
+    "term": "Tax Saving FD",
+    "aliases": ["80c fd", "tax fd", "tax saver fd"],
+    "definitions": {
+      "hi": "टैक्स सेवर FD — 5 साल का लॉक-इन, पर 1.5 लाख तक की कमाई पर टैक्स छूट (80C)। नुकसान: 5 साल पहले नहीं तोड़ सकते।",
+      "bho": "टैक्स सेवर FD — 5 साल के लॉक-इन बा, पर 1.5 लाख तक के कमाई पर टैक्स माफी। नुकसान: 5 साल पहिले नइखे टूटी।",
+      "ta": "வரி சேமிப்பு FD — 5 ஆண்டு லாக்-இன், ஆனால் ₹1.5 லட்சம் வரை வரி சலுகை (80C). குறைபாடு: 5 ஆண்டுக்கு முன் உடைக்க முடியாது.",
+      "en": "Tax Saving FD — 5-year lock-in period, but you get tax deduction up to ₹1.5 lakh under Section 80C. Cannot be broken early."
+    }
+  },
+  {
+    "id": "senior_citizen_fd",
+    "term": "Senior Citizen FD",
+    "aliases": ["senior fd", "senior citizen", "buzurg fd"],
+    "definitions": {
+      "hi": "वरिष्ठ नागरिक FD — 60 साल से ऊपर वालों को सामान्य दर से 0.5% ज्यादा ब्याज। TDS छूट सीमा भी ज्यादा (₹1 लाख/वर्ष)।",
+      "bho": "बुजुर्ग FD — 60 साल से ऊपर वाला के 0.5% ज्यादा ब्याज मिलेला। TDS छूट सीमा भी ज्यादा।",
+      "ta": "மூத்த குடிமகன் FD — 60 வயதுக்கு மேல் உள்ளோருக்கு 0.5% கூடுதல் வட்டி. TDS விலக்கு வரம்பும் அதிகம் (₹1 லட்சம்/ஆண்டு).",
+      "en": "Senior Citizen FD — People above 60 get 0.5% extra interest over regular rate. Also higher TDS exemption limit of ₹1 lakh/year."
+    }
+  },
+  {
+    "id": "monthly_income_fd",
+    "term": "Monthly Income FD",
+    "aliases": ["monthly payout", "non-cumulative fd", "masik aay fd"],
+    "definitions": {
+      "hi": "मासिक आय FD — ब्याज हर महीने आपके खाते में आता है। रिटायर्ड लोगों के लिए अच्छा।",
+      "bho": "महीना आय FD — ब्याज हर महिना खाते में आवेला। रिटायर लोगन खातिर बढ़िया।",
+      "ta": "மாதாந்திர வருமான FD — வட்டி ஒவ்வொரு மாதமும் கணக்கில் வரும். ஓய்வுபெற்றவர்களுக்கு ஏற்றது.",
+      "en": "Monthly Income FD — Interest is credited to your account every month instead of at maturity. Great for retirees needing regular income."
+    }
+  },
+  {
+    "id": "interest_rate",
+    "term": "interest rate",
+    "aliases": ["byaj dar", "byaj", "rate of interest", "vaj daram"],
+    "definitions": {
+      "hi": "ब्याज दर — बैंक आपको कितना पैसा देगा आपकी जमा राशि पर। जैसे 7% मतलब ₹1 लाख पर ₹7000 सालाना।",
+      "bho": "ब्याज दर — बैंक आपके पइसा पर कितना देई। 7% मतलब ₹1 लाख पर ₹7000 साल में।",
+      "ta": "வட்டி விகிதம் — வங்கி உங்கள் பணத்திற்கு எவ்வளவு தரும். 7% என்றால் ₹1 லட்சத்திற்கு ₹7000 ஆண்டுக்கு.",
+      "en": "Interest rate — the extra money the bank pays you for keeping your money there. 7% means ₹7000 per year on ₹1 lakh."
+    }
+  }
+]

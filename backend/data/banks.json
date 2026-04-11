@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "sbi",
+    "name": "State Bank of India",
+    "type": "public",
+    "type_label": "Public Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 6.5, "senior": 7.0 },
+      "12M": { "general": 6.8, "senior": 7.3 },
+      "24M": { "general": 7.0, "senior": 7.5 }
+    }
+  },
+  {
+    "slug": "hdfc",
+    "name": "HDFC Bank",
+    "type": "private",
+    "type_label": "Private Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 7.0, "senior": 7.5 },
+      "12M": { "general": 7.25, "senior": 7.75 },
+      "24M": { "general": 7.4, "senior": 7.9 }
+    }
+  },
+  {
+    "slug": "suryoday",
+    "name": "Suryoday Small Finance Bank",
+    "type": "small_finance",
+    "type_label": "Small Finance Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 7.9, "senior": 8.1 },
+      "12M": { "general": 8.5, "senior": 8.75 },
+      "24M": { "general": 8.6, "senior": 8.85 }
+    }
+  },
+  {
+    "slug": "au",
+    "name": "AU Small Finance Bank",
+    "type": "small_finance",
+    "type_label": "Small Finance Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 6.75, "senior": 6.92 },
+      "12M": { "general": 7.25, "senior": 7.75 },
+      "24M": { "general": 7.25, "senior": 7.75 }
+    }
+  },
+  {
+    "slug": "jana",
+    "name": "Jana Small Finance Bank",
+    "type": "small_finance",
+    "type_label": "Small Finance Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 7.5, "senior": 7.75 },
+      "12M": { "general": 7.7, "senior": 8.0 },
+      "24M": { "general": 7.5, "senior": 7.75 }
+    }
+  },
+  {
+    "slug": "ujjivan",
+    "name": "Ujjivan Small Finance Bank",
+    "type": "small_finance",
+    "type_label": "Small Finance Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 7.85, "senior": 8.1 },
+      "12M": { "general": 8.2, "senior": 8.45 },
+      "24M": { "general": 8.3, "senior": 8.55 }
+    }
+  },
+  {
+    "slug": "icici",
+    "name": "ICICI Bank",
+    "type": "private",
+    "type_label": "Private Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 6.25, "senior": 6.75 },
+      "12M": { "general": 6.5, "senior": 7.0 },
+      "24M": { "general": 6.5, "senior": 7.1 }
+    }
+  },
+  {
+    "slug": "axis",
+    "name": "Axis Bank",
+    "type": "private",
+    "type_label": "Private Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 6.0, "senior": 6.5 },
+      "12M": { "general": 6.45, "senior": 7.2 },
+      "24M": { "general": 6.5, "senior": 7.25 }
+    }
+  },
+  {
+    "slug": "pnb",
+    "name": "Punjab National Bank",
+    "type": "public",
+    "type_label": "Public Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 6.25, "senior": 6.75 },
+      "12M": { "general": 6.6, "senior": 7.1 },
+      "24M": { "general": 6.5, "senior": 7.0 }
+    }
+  },
+  {
+    "slug": "bob",
+    "name": "Bank of Baroda",
+    "type": "public",
+    "type_label": "Public Bank",
+    "dicgc_insured": true,
+    "rates": {
+      "6M": { "general": 6.25, "senior": 6.75 },
+      "12M": { "general": 6.85, "senior": 7.35 },
+      "24M": { "general": 6.5, "senior": 7.0 }
+    }
+  }
+]
