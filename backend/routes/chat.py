@@ -9,7 +9,7 @@ from services.llm_service import advisor_reply
 router = APIRouter(prefix="/api/chat", tags=["chat"])
 
 
-def _history_list(db: Session, session_id: str, limit: int = 8) -> list[dict[str, str]]:
+def _history_snippet(db: Session, session_id: str, limit: int = 8) -> str:
     rows = (
         db.query(ChatMessage)
         .filter(ChatMessage.session_id == session_id)
@@ -18,7 +18,8 @@ def _history_list(db: Session, session_id: str, limit: int = 8) -> list[dict[str
         .all()
     )
     rows = list(reversed(rows))
-    return [{"role": m.role, "content": m.content} for m in rows]
+    lines = [f"{m.role}: {m.content}" for m in rows]
+    return "\n".join(lines) if lines else ""
 
 
 @router.post("", response_model=ChatResponse)
@@ -26,7 +27,7 @@ def post_chat(body: ChatRequest, db: Session = Depends(get_db)):
     if not body.eli5_of and not (body.message or "").strip():
         raise HTTPException(status_code=400, detail="message or eli5_of required")
 
-    history = _history_list(db, body.session_id)
+    history = _history_snippet(db, body.session_id)
 
     if not body.eli5_of:
         db.add(
