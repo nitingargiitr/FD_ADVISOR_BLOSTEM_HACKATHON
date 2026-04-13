@@ -13,8 +13,7 @@ function nextId() {
   return msgId;
 }
 
-export default function Chat() {
-  const [language, setLanguage] = useState("hi");
+export default function Chat({ language, setLanguage }) {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [sending, setSending] = useState(false);
@@ -31,21 +30,12 @@ export default function Chat() {
   async function handleSend() {
     const text = input.trim();
     if (!text || sending) return;
-    const detected = detectLanguageFromText(text);
-    let lang = language;
-    if (detected === "ta") {
-      lang = "ta";
-      setLanguage("ta");
-    } else if (detected === "hi" && language === "en") {
-      lang = "hi";
-      setLanguage("hi");
-    }
     setInput("");
     push("user", text);
     setSending(true);
     setToast(null);
     try {
-      const data = await sendChat({ message: text, language: lang, sessionId });
+      const data = await sendChat({ message: text, language, sessionId });
       push("assistant", data.reply);
       if (data.jargon_terms?.length) {
         setToast(null);
@@ -56,6 +46,21 @@ export default function Chat() {
     } finally {
       setSending(false);
     }
+  }
+
+  function handleChipClick(chip) {
+    const text = chip.trim();
+    if (!text || sending) return;
+    push("user", text);
+    setSending(true);
+    setToast(null);
+    sendChat({ message: text, language, sessionId })
+      .then((data) => push("assistant", data.reply))
+      .catch((e) => {
+        const detail = e.response?.data?.detail;
+        setToast(typeof detail === "string" ? detail : e.message || "Request failed");
+      })
+      .finally(() => setSending(false));
   }
 
   async function handleEli5(m) {
@@ -82,7 +87,7 @@ export default function Chat() {
   return (
     <div className="mx-auto flex h-[100dvh] max-w-lg flex-col px-3 pb-3 pt-3 md:mx-auto md:max-w-2xl">
       <Toast message={toast} onClose={() => setToast(null)} />
-      <div className="flex shrink-0 items-center justify-between gap-2 border-b border-zinc-800 pb-3">
+      <div className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
           <Link to="/" className="rounded-full p-2 text-zinc-400 hover:bg-zinc-800 hover:text-white">
             <ArrowLeft className="h-5 w-5" />
@@ -104,6 +109,9 @@ export default function Chat() {
           onEli5={handleEli5}
           eli5TargetId={eli5TargetId}
           eli5Loading={eli5Loading}
+          language={language}
+          onChipClick={handleChipClick}
+          onVoiceError={(err) => setToast(err)}
         />
       </div>
     </div>
