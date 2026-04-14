@@ -6,67 +6,128 @@ import BankComparison from "../components/BankComparison.jsx";
 import FDCalculator from "../components/FDCalculator.jsx";
 import BookingFlow from "../components/BookingFlow.jsx";
 
-export default function Home() {
-  const [lang, setLang] = useState("hi");
+export default function Home({ lang, setLang }) {
 
   const nav = {
-    hi: { chat: "चैट", glossary: "शब्दकोश", sub: "टियर 2/3 नए निवेशकों के लिए FD मित्र" },
-    bho: { chat: "चैट", glossary: "शब्दकोश", sub: "नया निवेशक खातिर FD मित्र" },
-    ta: { chat: "அரட்டை", glossary: "சொற்களஞ்சியம்", sub: "புதிய முதலீட்டாளர்களுக்கான FD Mitra" },
-    en: { chat: "Chat", glossary: "Glossary", sub: "FD Mitra for first-time investors" },
+    hi: { 
+      chat: "चैट करें", 
+      glossary: "शब्दावली", 
+      sub: "नए निवेशकों के लिए आपका अपना FD गाइड",
+      heroTitle: "क्या बैंक की बातें समझ नहीं आतीं?",
+      heroSub: "FD मित्र से अपनी भाषा में पूछें। सबसे अच्छे रेट्स की तुलना करें और एक क्लिक में अपना रिटर्न कैलकुलेट करें।",
+      step1: { title: "1. पूछें और सीखें", desc: "कठिन शब्दों का आसान मतलब समझें।" },
+      step2: { title: "2. तुलना करें", desc: "विभिन्न बैंकों के FD रेट्स देखें।" },
+      step3: { title: "3. रिटर्न कैलकुलेट करें", desc: "जानें आपको अंत में कितना पैसा मिलेगा।" }
+    },
+    bho: { 
+      chat: "चैट करीं", 
+      glossary: "शब्दकोश", 
+      sub: "नया निवेशक लोगन खातिर FD गाइड",
+      heroTitle: "ई बैंक के बात समझ नईखे आवत?",
+      heroSub: "FD मित्र से आपन भासा में पूछीं। निमन रेट देखीं आ आपन मुनाफा निकालीं।",
+      step1: { title: "1. पूछीं आ सीखीं", desc: "कठिन बात के आसान मतलब समझीं।" },
+      step2: { title: "2. तुलना करीं", desc: "अलग-अलग बैंक के रेट देखीं।" },
+      step3: { title: "3. मुनाफा निकालीं", desc: "जानीं कि आखिर में केतना पईसा मिली।" }
+    },
+    ta: { 
+      chat: "கேளுங்கள்", 
+      glossary: "சொற்களஞ்சியம்", 
+      sub: "புதிய முதலீட்டாளர்களுக்கான உங்கள் FD வழிகாட்டி",
+      heroTitle: "வங்கி விதிமுறைகள் குழப்புகிறதா?",
+      heroSub: "FD மித்ராவிடம் உங்கள் மொழியில் கேளுங்கள். வட்டி விகிதங்களை ஒப்பிட்டு பாருங்கள்.",
+      step1: { title: "1. கேளுங்கள்", desc: "கடினமான சொற்களை எளிதாக புரிந்து கொள்ளுங்கள்." },
+      step2: { title: "2. ஒப்பிடுங்கள்", desc: "பல்வேறு வங்கிகளின் FD விகிதங்களை பார்க்கவும்." },
+      step3: { title: "3. கணக்கிடுங்கள்", desc: "உங்கள் முதிர்வு தொகையை கண்டுபிடிக்கவும்." }
+    },
+    en: { 
+      chat: "Chat with FD Mitra", 
+      glossary: "Browse Glossary", 
+      sub: "Your personal Fixed Deposit guide",
+      heroTitle: "Confused by bank jargon?",
+      heroSub: "Ask FD Mitra in your own language. Compare the best rates and calculate your returns effortlessly.",
+      step1: { title: "1. Ask & Learn", desc: "Understand difficult terms easily." },
+      step2: { title: "2. Compare", desc: "See real bank FD interest rates." },
+      step3: { title: "3. Calculate", desc: "Find your exact maturity amount." }
+    },
   };
   const N = nav[lang] || nav.en;
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-5xl flex-col px-4 pb-16 pt-6">
-      <header className="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800 pb-6">
+    <div className="mx-auto flex relative z-10 flex-col px-4 pb-16 pt-6 max-w-5xl">
+      <header className="flex flex-wrap items-center justify-between gap-4 border-b border-white/5 pb-5">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-white md:text-3xl">FD Mitra</h1>
-          <p className="mt-1 text-sm text-zinc-400">{N.sub}</p>
+          <h1 className="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+            FD Mitra
+          </h1>
+          <p className="mt-1 text-sm font-medium text-emerald-100/60">{N.sub}</p>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-xs text-zinc-500">भाषा / மொழி</span>
+          <span className="text-xs text-white/40 uppercase tracking-wider">Language</span>
           <LanguageSelector value={lang} onChange={setLang} />
         </div>
       </header>
 
-      <nav className="mt-6 flex flex-wrap gap-3">
-        <Link
-          to="/chat"
-          className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:bg-emerald-500"
-        >
-          <MessageCircle className="h-4 w-4" />
-          {N.chat}
-        </Link>
-        <Link
-          to="/glossary"
-          className="inline-flex items-center gap-2 rounded-xl border border-zinc-600 px-5 py-3 text-sm text-zinc-200 hover:bg-zinc-900"
-        >
-          <BookOpen className="h-4 w-4" />
-          {N.glossary}
-        </Link>
-      </nav>
-
-      <section className="mt-10 rounded-2xl border border-amber-900/40 bg-gradient-to-br from-amber-950/40 to-zinc-950 p-6">
-        <p className="text-xs font-medium uppercase tracking-wider text-amber-400/90">Demo banner</p>
-        <h2 className="mt-2 text-xl font-semibold text-zinc-100">
-          Suryoday Small Finance Bank — 8.50% p.a. — 12M tenor
+      {/* Hero Onboarding Section */}
+      <section className="mt-12 mb-12 text-center">
+        <h2 className="text-3xl font-extrabold text-white md:text-5xl tracking-tight mb-4 drop-shadow-md">
+          {N.heroTitle}
         </h2>
-        <p className="mt-2 max-w-2xl text-sm text-zinc-400">
-          गोरखपुर में कोई यूज़र यह देखता है — p.a. क्या है? 12M क्या है? FD Mitra सरल भाषा में समाता है।
+        <p className="mx-auto max-w-2xl text-base md:text-lg text-emerald-100/70 mb-8">
+          {N.heroSub}
         </p>
-      </section>
-
-      <section className="mt-10 grid gap-8 lg:grid-cols-2">
-        <BankComparison />
-        <div className="space-y-6">
-          <FDCalculator language={lang} />
-          <BookingFlow language={lang} />
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link
+            to="/chat"
+            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 px-6 py-4 text-base font-semibold text-white shadow-xl shadow-emerald-900/40 transition-all hover:scale-[1.02] hover:shadow-emerald-900/60"
+          >
+            <MessageCircle className="h-5 w-5" />
+            {N.chat}
+          </Link>
+          <Link
+            to="/glossary"
+            className="glass-panel inline-flex items-center gap-2 rounded-2xl px-6 py-4 text-base font-medium text-emerald-100 transition-all hover:scale-[1.02] hover:bg-white/10"
+          >
+            <BookOpen className="h-5 w-5 text-emerald-300" />
+            {N.glossary}
+          </Link>
         </div>
       </section>
 
-      <footer className="mt-12 text-center text-xs text-zinc-600">
-        Vernacular FD Advisor — Hindi · Bhojpuri · Tamil · English
+      {/* Logic Steps */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+        {[N.step1, N.step2, N.step3].map((step, i) => (
+          <div key={i} className="glass-panel rounded-2xl p-5 text-left transform transition hover:-translate-y-1">
+            <h3 className="text-lg font-bold text-emerald-300 mb-2">{step.title}</h3>
+            <p className="text-sm text-zinc-300">{step.desc}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* Interactive Widgets */}
+      <div className="mb-6 flex items-center justify-between border-b border-white/5 pb-4">
+        <h2 className="text-2xl font-bold text-white tracking-tight">Tools & Calculators</h2>
+      </div>
+
+      <section className="grid gap-8 lg:grid-cols-2 group">
+        <div className="glass-panel rounded-2xl p-6 transition-all">
+          <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Bank Comparison
+          </h3>
+          <BankComparison />
+        </div>
+        <div className="space-y-6">
+          <div className="glass-panel rounded-2xl p-6 transition-all line-clamp-none">
+            <FDCalculator language={lang} />
+          </div>
+          <div className="glass-panel rounded-2xl p-6 transition-all">
+            <BookingFlow language={lang} />
+          </div>
+        </div>
+      </section>
+
+      <footer className="mt-16 text-center text-xs font-medium text-white/30 uppercase tracking-widest">
+        Vernacular FD Advisor
       </footer>
     </div>
   );

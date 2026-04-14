@@ -4,8 +4,7 @@ import { useState } from "react";
 import LanguageSelector from "../components/LanguageSelector.jsx";
 import JargonGlossary from "../components/JargonGlossary.jsx";
 
-export default function Glossary() {
-  const [lang, setLang] = useState("hi");
+export default function Glossary({ lang, setLang }) {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-6">

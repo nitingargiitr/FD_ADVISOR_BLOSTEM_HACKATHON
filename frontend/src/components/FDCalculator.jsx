@@ -40,8 +40,8 @@ export default function FDCalculator({ language }) {
   }
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5">
-      <h3 className="mb-4 text-lg font-semibold text-emerald-300">{L.title}</h3>
+    <div className="p-2">
+      <h3 className="mb-6 text-xl font-bold tracking-tight text-white">{L.title}</h3>
       <div className="space-y-4">
         <div>
           <label className="text-xs text-zinc-500">{L.amt}</label>
@@ -96,14 +96,14 @@ export default function FDCalculator({ language }) {
         </button>
         {err && <p className="text-sm text-red-400">{String(err)}</p>}
         {result && (
-          <div className="rounded-xl border border-emerald-900/50 bg-emerald-950/30 p-4 text-sm">
+          <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 backdrop-blur-sm p-5 text-sm shadow-inner transition-all animate-fade-in text-white">
             <p className="text-zinc-300">
               Maturity:{" "}
               <span className="font-semibold text-emerald-200">
                 ₹{result.maturity_amount.toLocaleString("en-IN")}
               </span>
             </p>
-            <p className="mt-1 text-zinc-400">Interest: ₹{result.interest_earned.toLocaleString("en-IN")}</p>
+            <p className="mt-2 text-emerald-100/80">Interest: <span className="font-medium text-emerald-300">₹{result.interest_earned.toLocaleString("en-IN")}</span></p>
             <p className="mt-2 text-xs text-zinc-500">{result.tds_note}</p>
           </div>
         )}

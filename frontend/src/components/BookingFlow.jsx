@@ -84,8 +84,8 @@ export default function BookingFlow({ language }) {
   }
 
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-5">
-      <h3 className="text-lg font-semibold text-emerald-300">{C.title}</h3>
+    <div className="p-2">
+      <h3 className="mb-2 text-xl font-bold tracking-tight text-white">{C.title}</h3>
       <p className="mt-1 text-sm text-zinc-500">{prompt}</p>
 
       {!bid && (
