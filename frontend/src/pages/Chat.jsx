@@ -89,7 +89,7 @@ export default function Chat({ language, setLanguage }) {
       <Toast message={toast} onClose={() => setToast(null)} />
       <div className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 pb-3">
         <div className="flex items-center gap-2">
-          <Link to="/" className="rounded-full p-2 text-zinc-400 hover:bg-zinc-800 hover:text-white">
+          <Link to="/dashboard" className="rounded-full p-2 text-zinc-400 hover:bg-zinc-800 hover:text-white">
             <ArrowLeft className="h-5 w-5" />
           </Link>
           <div>

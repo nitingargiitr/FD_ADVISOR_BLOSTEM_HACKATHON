@@ -154,14 +154,58 @@
     }
   },
   {
-    "id": "kyc",
-    "term": "KYC",
-    "aliases": ["know your customer"],
+    "id": "regular_fd",
+    "term": "Regular FD",
+    "aliases": ["fixed deposit", "fd", "saadharan fd"],
     "definitions": {
-      "hi": "KYC — बैंक आपकी पहचान जानने के लिए आधार/फोटो/पता मांगता है।",
-      "bho": "KYC — बैंक पहचान खातिर आधार/फोटो/पता मांगेला।",
-      "ta": "KYC — வங்கி உங்கள் அடையாளத்தை உறுதிப்படுத்த ஆதார்/புகைப்படம்/முகவரி கேட்கும்.",
-      "en": "Know Your Customer — identity and address checks banks must do."
+      "hi": "सामान्य FD — बैंक में पैसा एक तय समय के लिए रखें और गारंटीड ब्याज पाएं। गुल्लक की तरह, पर ब्याज के साथ।",
+      "bho": "साधारण FD — बैंक में पैसा तय समय खातिर रखीं आ पक्का ब्याज पाईं। गुल्लक जइसन, पर ब्याज के साथे।",
+      "ta": "சாதாரண FD — வங்கியில் குறிப்பிட்ட காலம் பணம் வைத்து உத்தரவாத வட்டி பெறுங்கள். சேமிப்பு குண்டு போல, ஆனால் வட்டியுடன்.",
+      "en": "Regular FD — Lock money in a bank for a set time (7 days to 10 years) and earn guaranteed interest. Like a piggy bank that grows."
+    }
+  },
+  {
+    "id": "tax_saving_fd",
+    "term": "Tax Saving FD",
+    "aliases": ["80c fd", "tax fd", "tax saver fd"],
+    "definitions": {
+      "hi": "टैक्स सेवर FD — 5 साल का लॉक-इन, पर 1.5 लाख तक की कमाई पर टैक्स छूट (80C)। नुकसान: 5 साल पहले नहीं तोड़ सकते।",
+      "bho": "टैक्स सेवर FD — 5 साल के लॉक-इन बा, पर 1.5 लाख तक के कमाई पर टैक्स माफी। नुकसान: 5 साल पहिले नइखे टूटी।",
+      "ta": "வரி சேமிப்பு FD — 5 ஆண்டு லாக்-இன், ஆனால் ₹1.5 லட்சம் வரை வரி சலுகை (80C). குறைபாடு: 5 ஆண்டுக்கு முன் உடைக்க முடியாது.",
+      "en": "Tax Saving FD — 5-year lock-in period, but you get tax deduction up to ₹1.5 lakh under Section 80C. Cannot be broken early."
+    }
+  },
+  {
+    "id": "senior_citizen_fd",
+    "term": "Senior Citizen FD",
+    "aliases": ["senior fd", "senior citizen", "buzurg fd"],
+    "definitions": {
+      "hi": "वरिष्ठ नागरिक FD — 60 साल से ऊपर वालों को सामान्य दर से 0.5% ज्यादा ब्याज। TDS छूट सीमा भी ज्यादा (₹1 लाख/वर्ष)।",
+      "bho": "बुजुर्ग FD — 60 साल से ऊपर वाला के 0.5% ज्यादा ब्याज मिलेला। TDS छूट सीमा भी ज्यादा।",
+      "ta": "மூத்த குடிமகன் FD — 60 வயதுக்கு மேல் உள்ளோருக்கு 0.5% கூடுதல் வட்டி. TDS விலக்கு வரம்பும் அதிகம் (₹1 லட்சம்/ஆண்டு).",
+      "en": "Senior Citizen FD — People above 60 get 0.5% extra interest over regular rate. Also higher TDS exemption limit of ₹1 lakh/year."
+    }
+  },
+  {
+    "id": "monthly_income_fd",
+    "term": "Monthly Income FD",
+    "aliases": ["monthly payout", "non-cumulative fd", "masik aay fd"],
+    "definitions": {
+      "hi": "मासिक आय FD — ब्याज हर महीने आपके खाते में आता है। रिटायर्ड लोगों के लिए अच्छा।",
+      "bho": "महीना आय FD — ब्याज हर महिना खाते में आवेला। रिटायर लोगन खातिर बढ़िया।",
+      "ta": "மாதாந்திர வருமான FD — வட்டி ஒவ்வொரு மாதமும் கணக்கில் வரும். ஓய்வுபெற்றவர்களுக்கு ஏற்றது.",
+      "en": "Monthly Income FD — Interest is credited to your account every month instead of at maturity. Great for retirees needing regular income."
+    }
+  },
+  {
+    "id": "interest_rate",
+    "term": "interest rate",
+    "aliases": ["byaj dar", "byaj", "rate of interest", "vaj daram"],
+    "definitions": {
+      "hi": "ब्याज दर — बैंक आपको कितना पैसा देगा आपकी जमा राशि पर। जैसे 7% मतलब ₹1 लाख पर ₹7000 सालाना।",
+      "bho": "ब्याज दर — बैंक आपके पइसा पर कितना देई। 7% मतलब ₹1 लाख पर ₹7000 साल में।",
+      "ta": "வட்டி விகிதம் — வங்கி உங்கள் பணத்திற்கு எவ்வளவு தரும். 7% என்றால் ₹1 லட்சத்திற்கு ₹7000 ஆண்டுக்கு.",
+      "en": "Interest rate — the extra money the bank pays you for keeping your money there. 7% means ₹7000 per year on ₹1 lakh."
     }
   }
 ]
