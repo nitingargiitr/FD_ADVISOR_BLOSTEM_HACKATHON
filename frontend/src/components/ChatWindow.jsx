@@ -88,7 +88,7 @@ export default function ChatWindow({
                 <button
                   key={chip}
                   onClick={() => onChipClick(chip)}
-                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-200 backdrop-blur-sm transition hover:bg-emerald-500/20 hover:border-emerald-400/40 hover:text-emerald-200"
+                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-zinc-200 backdrop-blur-sm transition hover:bg-sky-500/20 hover:border-sky-400/40 hover:text-sky-200"
                 >
                   {chip}
                 </button>
@@ -138,7 +138,7 @@ export default function ChatWindow({
           className={`flex-1 rounded-xl border px-4 py-3 text-sm text-zinc-100 outline-none placeholder:text-zinc-500 transition-all backdrop-blur-md ${
             listening
               ? "border-red-400/40 bg-red-950/20 ring-2 ring-red-400/30 animate-pulse"
-              : "border-white/10 bg-black/30 focus:ring-2 focus:ring-emerald-500/50"
+              : "border-white/10 bg-black/30 focus:ring-2 focus:ring-sky-500/50"
           }`}
           readOnly={listening}
         />
@@ -160,7 +160,7 @@ export default function ChatWindow({
         <button
           type="submit"
           disabled={sending || !input.trim()}
-          className="flex items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-4 py-3 text-white shadow-lg shadow-emerald-900/40 transition hover:scale-[1.02] disabled:opacity-40"
+          className="flex items-center justify-center rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-3 text-white shadow-lg shadow-sky-900/40 transition hover:scale-[1.02] disabled:opacity-40"
         >
           <Send className="h-5 w-5" />
         </button>

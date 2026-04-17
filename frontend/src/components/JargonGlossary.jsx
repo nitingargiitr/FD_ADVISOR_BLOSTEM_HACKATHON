@@ -24,7 +24,7 @@ export default function JargonGlossary({ language }) {
             onClick={() => setFlipped((s) => ({ ...s, [e.id]: !open }))}
             className={`min-h-[140px] rounded-2xl border p-4 text-left transition duration-300 ${
               open
-                ? "border-emerald-600/50 bg-emerald-950/30"
+                ? "border-sky-600/50 bg-sky-950/30"
                 : "border-zinc-700 bg-zinc-900/60 hover:border-zinc-600"
             }`}
           >

@@ -40,7 +40,7 @@ export default function BankComparison() {
     <div className="overflow-x-auto -mx-6 px-6">
       <table className="w-full min-w-[520px] text-left text-sm">
         <thead>
-          <tr className="border-b border-white/10 text-emerald-200">
+          <tr className="border-b border-white/10 text-sky-200">
             <th className="p-3 font-medium">Bank</th>
             <th className="p-3 font-medium">6M</th>
             <th className="p-3 font-medium">12M</th>
@@ -83,8 +83,8 @@ export default function BankComparison() {
         </tbody>
       </table>
       <div className="mt-4 flex flex-wrap items-start gap-x-4 gap-y-2 border-t border-white/5 pt-3 text-[11px]">
-        <span className="flex items-center gap-1.5 text-emerald-300/70">
-          <span className="inline-block h-2 w-2 flex-shrink-0 rounded-full bg-emerald-400"></span>
+        <span className="flex items-center gap-1.5 text-sky-300/70">
+          <span className="inline-block h-2 w-2 flex-shrink-0 rounded-full bg-sky-400"></span>
           All deposits insured up to ₹5 lakh (DICGC)
         </span>
         <span className="text-white/30">Indicative 2026 rates — verify at bank before investing.</span>

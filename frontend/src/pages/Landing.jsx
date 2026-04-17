@@ -85,7 +85,7 @@ export default function Landing({ lang, setLang }) {
                   setChosen(true);
                   localStorage.setItem("app_lang_chosen", "true");
                 }}
-                className="w-full flex items-center justify-between rounded-2xl bg-white/5 border border-white/10 px-6 py-4 transition-all hover:bg-emerald-500/20 hover:border-emerald-500/40 hover:scale-[1.02]"
+                className="w-full flex items-center justify-between rounded-2xl bg-white/5 border border-white/10 px-6 py-4 transition-all hover:bg-sky-500/20 hover:border-sky-500/40 hover:scale-[1.02]"
               >
                 <div className="text-xl font-bold text-white">{o.label}</div>
                 <div className="text-sm font-medium text-zinc-400">{o.sub}</div>
@@ -101,7 +101,7 @@ export default function Landing({ lang, setLang }) {
     <div className="mx-auto flex min-h-[100dvh] max-w-5xl flex-col relative z-10 px-4 py-8">
       {/* Header */}
       <header className="flex flex-wrap items-center justify-between gap-4 border-b border-white/5 pb-4">
-        <h1 className="text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+        <h1 className="text-2xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-200">
           FD Mitra
         </h1>
         <div className="flex items-center gap-3">
@@ -113,7 +113,7 @@ export default function Landing({ lang, setLang }) {
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center justify-center py-12 text-center">
         <div className="animate-fade-in max-w-3xl">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-300">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-300">
             <HandCoins className="h-4 w-4" />
             Made for Tier 2/3 First-Time Investors
           </div>
@@ -121,13 +121,13 @@ export default function Landing({ lang, setLang }) {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight drop-shadow-md mb-6 leading-tight">
             {c.hero}
           </h2>
-          <p className="text-lg sm:text-xl text-emerald-100/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-sky-100/70 mb-10 max-w-2xl mx-auto leading-relaxed">
             {c.sub}
           </p>
 
           <Link
             to="/dashboard"
-            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 px-8 py-4 text-lg font-bold text-white shadow-xl shadow-emerald-900/40 transition hover:scale-[1.05] hover:shadow-emerald-900/60"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 px-8 py-4 text-lg font-bold text-white shadow-xl shadow-sky-900/40 transition hover:scale-[1.05] hover:shadow-sky-900/60"
           >
             <PlayCircle className="h-6 w-6" />
             {c.start}
@@ -167,8 +167,8 @@ export default function Landing({ lang, setLang }) {
         {/* Trust Banner */}
         <div className="mt-16 w-full animate-fade-in" style={{ animationDelay: "300ms", animationFillMode: "both" }}>
           <div className="glass-panel max-w-2xl mx-auto rounded-2xl p-5 flex items-center justify-center gap-3 text-left">
-            <ShieldCheck className="h-8 w-8 text-emerald-400 shrink-0" />
-            <p className="text-sm md:text-base font-medium text-emerald-100">{c.trust}</p>
+            <ShieldCheck className="h-8 w-8 text-sky-400 shrink-0" />
+            <p className="text-sm md:text-base font-medium text-sky-100">{c.trust}</p>
           </div>
         </div>
       </main>

@@ -97,7 +97,7 @@ export default function BookingFlow({ language }) {
           type="button"
           onClick={start}
           disabled={loading}
-          className="mt-4 rounded-xl bg-emerald-600 px-4 py-2 text-sm text-white hover:bg-emerald-500 disabled:opacity-50"
+          className="mt-4 rounded-xl bg-sky-600 px-4 py-2 text-sm text-white hover:bg-sky-500 disabled:opacity-50"
         >
           {C.start}
         </button>
@@ -173,11 +173,11 @@ export default function BookingFlow({ language }) {
       )}
 
       {done && summary && (
-        <div className="mt-4 rounded-xl border border-emerald-800/50 bg-emerald-950/20 p-4 text-sm text-emerald-100">
+        <div className="mt-4 rounded-xl border border-sky-800/50 bg-sky-950/20 p-4 text-sm text-sky-100">
 
           ✓ {prompt}
 
-          <div className="mt-2 space-y-1 text-emerald-200">
+          <div className="mt-2 space-y-1 text-sky-200">
             <p>Bank: {summary.bank}</p>
             <p>Amount: ₹{summary.principal}</p>
             <p>Tenor: {summary.tenor_months} months</p>

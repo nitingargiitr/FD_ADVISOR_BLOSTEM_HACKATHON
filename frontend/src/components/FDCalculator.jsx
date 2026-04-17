@@ -52,7 +52,7 @@ export default function FDCalculator({ language }) {
             step={5000}
             value={principal}
             onChange={(e) => setPrincipal(Number(e.target.value))}
-            className="mt-1 w-full accent-emerald-500"
+            className="mt-1 w-full accent-sky-500"
           />
           <div className="text-right text-sm text-zinc-300">₹{principal.toLocaleString("en-IN")}</div>
         </div>
@@ -65,7 +65,7 @@ export default function FDCalculator({ language }) {
             step={0.05}
             value={rate}
             onChange={(e) => setRate(Number(e.target.value))}
-            className="mt-1 w-full accent-emerald-500"
+            className="mt-1 w-full accent-sky-500"
           />
           <div className="text-right text-sm text-zinc-300">{rate.toFixed(2)}%</div>
         </div>
@@ -78,7 +78,7 @@ export default function FDCalculator({ language }) {
             step={6}
             value={months}
             onChange={(e) => setMonths(Number(e.target.value))}
-            className="mt-1 w-full accent-emerald-500"
+            className="mt-1 w-full accent-sky-500"
           />
           <div className="text-right text-sm text-zinc-300">{months}M</div>
         </div>
@@ -90,20 +90,20 @@ export default function FDCalculator({ language }) {
           type="button"
           onClick={run}
           disabled={loading}
-          className="w-full rounded-xl bg-emerald-600 py-2.5 text-sm font-medium text-white hover:bg-emerald-500 disabled:opacity-50"
+          className="w-full rounded-xl bg-sky-600 py-2.5 text-sm font-medium text-white hover:bg-sky-500 disabled:opacity-50"
         >
           {loading ? "…" : L.go}
         </button>
         {err && <p className="text-sm text-red-400">{String(err)}</p>}
         {result && (
-          <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 backdrop-blur-sm p-5 text-sm shadow-inner transition-all animate-fade-in text-white">
+          <div className="rounded-xl border border-sky-500/30 bg-sky-500/10 backdrop-blur-sm p-5 text-sm shadow-inner transition-all animate-fade-in text-white">
             <p className="text-zinc-300">
               Maturity:{" "}
-              <span className="font-semibold text-emerald-200">
+              <span className="font-semibold text-sky-200">
                 ₹{result.maturity_amount.toLocaleString("en-IN")}
               </span>
             </p>
-            <p className="mt-2 text-emerald-100/80">Interest: <span className="font-medium text-emerald-300">₹{result.interest_earned.toLocaleString("en-IN")}</span></p>
+            <p className="mt-2 text-sky-100/80">Interest: <span className="font-medium text-sky-300">₹{result.interest_earned.toLocaleString("en-IN")}</span></p>
             <p className="mt-2 text-xs text-zinc-500">{result.tds_note}</p>
           </div>
         )}
