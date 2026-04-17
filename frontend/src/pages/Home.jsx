@@ -56,10 +56,10 @@ export default function Home({ lang, setLang }) {
     <div className="mx-auto flex relative z-10 flex-col px-4 pb-16 pt-6 max-w-5xl">
       <header className="flex flex-wrap items-center justify-between gap-4 border-b border-white/5 pb-5">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+          <h1 className="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-200">
             FD Mitra
           </h1>
-          <p className="mt-1 text-sm font-medium text-emerald-100/60">{N.sub}</p>
+          <p className="mt-1 text-sm font-medium text-sky-100/60">{N.sub}</p>
         </div>
         <div className="flex items-center gap-3">
           <span className="text-xs text-white/40 uppercase tracking-wider">Language</span>
@@ -72,22 +72,22 @@ export default function Home({ lang, setLang }) {
         <h2 className="text-3xl font-extrabold text-white md:text-5xl tracking-tight mb-4 drop-shadow-md">
           {N.heroTitle}
         </h2>
-        <p className="mx-auto max-w-2xl text-base md:text-lg text-emerald-100/70 mb-8">
+        <p className="mx-auto max-w-2xl text-base md:text-lg text-sky-100/70 mb-8">
           {N.heroSub}
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link
             to="/chat"
-            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 px-6 py-4 text-base font-semibold text-white shadow-xl shadow-emerald-900/40 transition-all hover:scale-[1.02] hover:shadow-emerald-900/60"
+            className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-4 text-base font-semibold text-white shadow-xl shadow-sky-900/40 transition-all hover:scale-[1.02] hover:shadow-sky-900/60 hover:card-highlight"
           >
             <MessageCircle className="h-5 w-5" />
             {N.chat}
           </Link>
           <Link
             to="/glossary"
-            className="glass-panel inline-flex items-center gap-2 rounded-2xl px-6 py-4 text-base font-medium text-emerald-100 transition-all hover:scale-[1.02] hover:bg-white/10"
+            className="glass-panel inline-flex items-center gap-2 rounded-2xl px-6 py-4 text-base font-medium text-sky-100 transition-all hover:scale-[1.02] hover:bg-white/10 hover:card-highlight"
           >
-            <BookOpen className="h-5 w-5 text-emerald-300" />
+            <BookOpen className="h-5 w-5 text-sky-300" />
             {N.glossary}
           </Link>
         </div>
@@ -96,8 +96,8 @@ export default function Home({ lang, setLang }) {
       {/* Logic Steps */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
         {[N.step1, N.step2, N.step3].map((step, i) => (
-          <div key={i} className="glass-panel rounded-2xl p-5 text-left transform transition hover:-translate-y-1">
-            <h3 className="text-lg font-bold text-emerald-300 mb-2">{step.title}</h3>
+          <div key={i} className="glass-panel rounded-2xl p-5 text-left transform transition hover:card-highlight">
+            <h3 className="text-lg font-bold text-sky-400 mb-2">{step.title}</h3>
             <p className="text-sm text-zinc-300">{step.desc}</p>
           </div>
         ))}
@@ -109,18 +109,18 @@ export default function Home({ lang, setLang }) {
       </div>
 
       <section className="grid gap-8 lg:grid-cols-2 group">
-        <div className="glass-panel rounded-2xl p-6 transition-all">
+        <div className="glass-panel rounded-2xl p-6 transition-all hover:card-highlight">
           <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
             Bank Comparison
           </h3>
           <BankComparison />
         </div>
         <div className="space-y-6">
-          <div className="glass-panel rounded-2xl p-6 transition-all line-clamp-none">
+          <div className="glass-panel rounded-2xl p-6 transition-all line-clamp-none hover:card-highlight">
             <FDCalculator language={lang} />
           </div>
-          <div className="glass-panel rounded-2xl p-6 transition-all">
+          <div className="glass-panel rounded-2xl p-6 transition-all hover:card-highlight">
             <BookingFlow language={lang} />
           </div>
         </div>
