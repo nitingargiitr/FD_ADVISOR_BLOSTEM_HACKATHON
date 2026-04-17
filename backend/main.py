@@ -32,3 +32,27 @@ def on_startup():
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+# ---- Serve React App ----
+from fastapi.responses import FileResponse
+from pathlib import Path
+
+frontend_dist = Path(__file__).parent.parent / "frontend" / "dist"
+
+@app.get("/{full_path:path}")
+def serve_react_app(full_path: str):
+    """
+    Catch-all route to serve the SPA. 
+    It checks if the requested file exists (like static assets),
+    otherwise it falls back to index.html for React Router.
+    """
+    file_path = frontend_dist / full_path
+    if file_path.is_file():
+        return FileResponse(file_path)
+    
+    index_file = frontend_dist / "index.html"
+    if index_file.exists():
+        return FileResponse(index_file)
+        
+    return {"error": "Frontend build not found. Please run 'npm run build' in frontend directory."}
