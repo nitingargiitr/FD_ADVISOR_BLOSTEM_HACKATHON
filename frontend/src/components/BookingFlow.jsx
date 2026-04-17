@@ -70,6 +70,7 @@ export default function BookingFlow({ language }) {
       let value = input.trim();
       if (step === "amount") value = Number(value);
       if (step === "tenor") value = Number(value);
+
       const r = await bookingStep(bid, language, value);
       setStep(r.step);
       setPrompt(r.prompt);
@@ -85,7 +86,10 @@ export default function BookingFlow({ language }) {
 
   return (
     <div className="p-2">
-      <h3 className="mb-2 text-xl font-bold tracking-tight text-white">{C.title}</h3>
+      <h3 className="mb-2 text-xl font-bold tracking-tight text-white">
+        {C.title}
+      </h3>
+
       <p className="mt-1 text-sm text-zinc-500">{prompt}</p>
 
       {!bid && (
@@ -101,6 +105,7 @@ export default function BookingFlow({ language }) {
 
       {bid && !done && (
         <div className="mt-4 space-y-3">
+
           {step === "bank" && (
             <select
               value={input}
@@ -108,13 +113,16 @@ export default function BookingFlow({ language }) {
               className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm"
             >
               <option value="">{C.bank}…</option>
+
               {banks.map((b) => (
                 <option key={b.slug} value={b.slug}>
                   {b.name}
                 </option>
               ))}
+
             </select>
           )}
+
           {step !== "bank" && step !== "confirm" && (
             <input
               value={input}
@@ -123,6 +131,7 @@ export default function BookingFlow({ language }) {
               placeholder={step === "amount" ? "100000" : "12"}
             />
           )}
+
           {step === "confirm" && (
             <input
               value={input}
@@ -131,6 +140,7 @@ export default function BookingFlow({ language }) {
               placeholder="yes / हाँ / ஆம்"
             />
           )}
+
           <button
             type="button"
             onClick={next}
@@ -139,22 +149,49 @@ export default function BookingFlow({ language }) {
           >
             {C.next}
           </button>
+
         </div>
       )}
 
+      {/* Friendly Summary UI instead of JSON */}
       {summary && !done && (
-        <pre className="mt-3 overflow-x-auto rounded-lg bg-zinc-950 p-3 text-xs text-zinc-400">
-          {JSON.stringify(summary, null, 2)}
-        </pre>
+        <div className="mt-3 rounded-xl border border-zinc-800 bg-zinc-950 p-3 text-sm text-zinc-300 space-y-1">
+          <p>
+            <span className="text-zinc-400">Bank:</span> {summary.bank || "-"}
+          </p>
+
+          <p>
+            <span className="text-zinc-400">Amount:</span>{" "}
+            {summary.principal ? `₹${summary.principal}` : "-"}
+          </p>
+
+          <p>
+            <span className="text-zinc-400">Tenor (months):</span>{" "}
+            {summary.tenor_months || "-"}
+          </p>
+        </div>
       )}
 
       {done && summary && (
         <div className="mt-4 rounded-xl border border-emerald-800/50 bg-emerald-950/20 p-4 text-sm text-emerald-100">
+
           ✓ {prompt}
+
+          <div className="mt-2 space-y-1 text-emerald-200">
+            <p>Bank: {summary.bank}</p>
+            <p>Amount: ₹{summary.principal}</p>
+            <p>Tenor: {summary.tenor_months} months</p>
+          </div>
+
         </div>
       )}
 
-      {err && <p className="mt-3 text-sm text-red-400">{String(err)}</p>}
+      {err && (
+        <p className="mt-3 text-sm text-red-400">
+          {String(err)}
+        </p>
+      )}
+
     </div>
   );
 }
