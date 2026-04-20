@@ -1,30 +1,29 @@
-# 🏦 Vernacular FD Advisor (FD Mitra)
+# Vernacular FD Advisor (FD Mitra)
 
 An AI-powered, multi-lingual financial inclusion platform designed to eliminate banking jargon and empower first-time investors from Tier-2 and Tier-3 Indian cities.
 
 [🚀 **Live Demo on Render**](https://fd-advisor-blostem-hackathon-1.onrender.com/)
-
+( use on chrome for better experience )
 ---
 
-## 🛑 The Problem
+## The Problem
 
 Across India, millions of people save locally in cash or informal setups because formal banking feels overwhelming. Financial terms like *Compound Interest*, *Maturity*, *Tenor*, and *TDS* are often explained in highly technical English. For an elder in a village or a small business owner in a Tier-3 town, investing in a Fixed Deposit (FD) is often a stressful process dictated by a bank agent rather than their own understanding.
 
-## 💡 Our Solution - FD Mitra
+## Our Solution - FD Mitra
 
 **FD Mitra** bridges this trust and literacy gap. We built an empathetic, voice-enabled AI companion that speaks the user's native language (e.g., Hindi, Bhojpuri, Tamil, English). It acts as a trusted elder sibling, breaking down complex financial jargon into relatable, bite-sized analogies.
 
-### ✨ Key Features
+### Key Features
 
-*   **🗣️ True Vernacular AI Chat**: Deep integration with Groq's high-speed **Llama-3.3-70B** model, fine-tuned strictly to provide localized, culturally contextual answers in the user's native language. 
-*   **🎙️ Voice-First Interaction**: Integrated seamless Speech-to-Text (STT) and Text-to-Speech (TTS). Users who are not comfortable typing can just tap the microphone and ask questions naturally.
-*   **👶 ELI5 (Explain Like I'm 5)**: A one-tap button on AI responses that instantly rewrites the advisor’s message into even simpler words, akin to explaining concepts to a child.
-*   **📊 Live Bank Comparison & Calculator**: Interactive sliders to instantly see the real compounding math. It compares current FD rates across Public, Private, and Small Finance banks, accurately calculating returns with proper warnings for Senior Citizen bonuses and TDS.
-*   **🏦 Interactive Booking Flow**: A simulated, step-by-step chat flow to build confidence in the actual booking process without the fear of pressing the wrong button.
+*   **True Vernacular AI Chat**: Deep integration with Groq's high-speed **Llama-3.3-70B** model, fine-tuned strictly to provide localized, culturally contextual answers in the user's native language. 
+*   **Voice-First Interaction**: Integrated seamless Speech-to-Text (STT) and Text-to-Speech (TTS). Users who are not comfortable typing can just tap the microphone and ask questions naturally.
+*   **Easy explanation**: A one-tap button on AI responses that instantly rewrites the advisor’s message into even simpler words, akin to explaining concepts to a child.
+*   **Interactive Booking Flow**: A simulated, step-by-step chat flow to build confidence in the actual booking process without the fear of pressing the wrong button.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 We focused on an ultra-fast, highly responsive architecture since our target demographic may not have access to high-end devices or flawless internet.
 
@@ -40,7 +39,7 @@ We focused on an ultra-fast, highly responsive architecture since our target dem
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 The repository is structured as a clean Monorepo:
 
@@ -57,7 +56,7 @@ The repository is structured as a clean Monorepo:
 
 ---
 
-## 🔌 Core API Endpoints
+##  Core API Endpoints
 
 *   **`POST /api/chat/message`**: Core conversation endpoint. Maintains context history and generates localized LLM responses.
 *   **`POST /api/chat/eli5`**: Specifically calls the LLM with an override prompt to simplify a previous response.
@@ -67,7 +66,7 @@ The repository is structured as a clean Monorepo:
 
 ---
 
-## ⚙️ Local Setup Guide
+##  Local Setup Guide
 
 Follow these steps to run **FD Mitra** locally:
 
@@ -105,4 +104,3 @@ npm run dev
 The application will be available at [http://localhost:5173](http://localhost:5173).
 
 ---
-*Built with ❤️ for the Blostem Hackathon.*
