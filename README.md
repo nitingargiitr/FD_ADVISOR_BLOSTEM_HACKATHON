@@ -8,7 +8,7 @@ An AI-powered, multi-lingual financial inclusion platform designed to eliminate 
 
 ## The Problem
 
-Across India, millions of people save locally in cash or informal setups because formal banking feels overwhelming. Financial terms like *Compound Interest*, *Maturity*, *Tenor*, and *TDS* are often explained in highly technical English. For an elder in a village or a small business owner in a Tier-3 town, investing in a Fixed Deposit (FD) is often a stressful process dictated by a bank agent rather than their own understanding.
+Across all over India, millions of people save locally in cash or informal setups because formal banking feels overwhelming. Financial terms like *Compound Interest*, *Maturity*, *Tenor*, and *TDS* are often explained in highly technical English. For an elder in a village or a small business owner in a Tier-3 town, investing in a Fixed Deposit (FD) is often a stressful process dictated by a bank agent rather than their own understanding.
 
 ## Our Solution - FD Mitra
 
@@ -25,7 +25,7 @@ Across India, millions of people save locally in cash or informal setups because
 
 ##  Tech Stack
 
-We focused on an ultra-fast, highly responsive architecture since our target demographic may not have access to high-end devices or flawless internet.
+We have focused on an ultra-fast, highly responsive architecture since our target demographic may not have access to high-end devices or flawless internet.
 
 **Frontend:**
 *   **React 18 & Vite**: Lightning-fast hot-reloading and optimized build sizes.
