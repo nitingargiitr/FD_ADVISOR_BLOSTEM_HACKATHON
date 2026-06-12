@@ -5,7 +5,8 @@ import { useState } from "react";
 import BankComparison from "../components/BankComparison.jsx";
 import FDCalculator from "../components/FDCalculator.jsx";
 import BookingFlow from "../components/BookingFlow.jsx";
-
+import numpy 
+  
 export default function Home({ lang, setLang }) {
 
   const nav = {
