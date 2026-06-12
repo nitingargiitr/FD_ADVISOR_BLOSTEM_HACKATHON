@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 
 LanguageCode = Literal["hi", "bho", "ta", "en"]
 
+// libraries req
 
 class ChatRequest(BaseModel):
     message: str = ""
